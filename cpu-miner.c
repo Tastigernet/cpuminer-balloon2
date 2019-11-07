@@ -84,6 +84,7 @@ enum algos {
 	ALGO_QUARK,       /* Quark */
 	ALGO_ALLIUM,      /* Garlicoin double lyra2 */
 	ALGO_AXIOM,       /* Shabal 256 Memohash */
+	ALGO_BALLOON,
 	ALGO_BASTION,
 	ALGO_BLAKE,       /* Blake 256 */
 	ALGO_BLAKECOIN,   /* Simplified 8 rounds Blake 256 */
@@ -153,6 +154,7 @@ static const char *algo_names[] = {
 	"quark",
 	"allium",
 	"axiom",
+	"balloon",
 	"bastion",
 	"blake",
 	"blakecoin",
@@ -2181,6 +2183,9 @@ static void *miner_thread(void *userdata)
 				else if (opt_nfactor > 16)
 					max64 = 0xF;
 				break;
+			case ALGO_BALLOON:
+				max64 = 0x3ff;
+				break;
 			case ALGO_AXIOM:
 			case ALGO_CRYPTOLIGHT:
 			case ALGO_CRYPTONIGHT:
@@ -2269,6 +2274,9 @@ static void *miner_thread(void *userdata)
 			break;
 		case ALGO_AXIOM:
 			rc = scanhash_axiom(thr_id, &work, max_nonce, &hashes_done);
+			break;
+		case ALGO_BALLOON:
+			rc = scanhash_balloon(thr_id, &work, max_nonce, &hashes_done);
 			break;
 		case ALGO_BASTION:
 			rc = scanhash_bastion(thr_id, &work, max_nonce, &hashes_done);

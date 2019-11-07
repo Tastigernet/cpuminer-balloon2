@@ -60,6 +60,7 @@ cpuminer_SOURCES = \
   algo/allium.c \
   algo/axiom.c \
   algo/bastion.c \
+  algo/balloon.c \
   algo/blake.c \
   algo/blakecoin.c \
   algo/blake2.c \

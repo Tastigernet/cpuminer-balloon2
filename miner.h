@@ -200,6 +200,7 @@ struct work;
 
 int scanhash_allium(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
 int scanhash_axiom(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
+int scanhash_balloon(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
 int scanhash_bastion(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
 int scanhash_blake(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
 int scanhash_blakecoin(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);

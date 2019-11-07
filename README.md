@@ -26,6 +26,7 @@ Algorithms
  * ✓ __sha256d__ (Bitcoin, Freicoin, Peercoin/PPCoin, Terracoin, ...)
  * ✓ __allium__ (Garlicoin, Tuxcoin)
  * ✓ __axiom__ (Axiom Shabal-256 based MemoHash)
+ * ✓ __balloon__ (Balloon2)
  * ✓ __bastion__ (Joincoin [J])
  * ✓ __bitcore__ Permuted serie of 10 algos (BitCore)
  * ✓ __blake__ (Saffron [SFR] Blake-256)
